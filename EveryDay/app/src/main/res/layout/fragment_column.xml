@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <com.app.everyday.views.infiniteindicator.InfiniteIndicatorLayout
+                    android:id="@+id/indicator_default_circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.app.everyday.views.infiniteindicator.InfiniteIndicatorLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/btn_mine_white" />
+
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <com.app.everyday.views.CompleteGridView
+                android:id="@+id/mygridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_top"
+                android:background="@color/grey_300"
+                android:numColumns="2"
+                android:scrollbars="none"></com.app.everyday.views.CompleteGridView>
+        </RelativeLayout>
+
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

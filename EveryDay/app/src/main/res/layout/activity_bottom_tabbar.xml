@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0dp"
+        android:layout_above="@+id/layout_bottom"
+        android:background="@color/grey_200"></View>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_50"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_every_day"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_bottom_homepage_everyday" />
+
+            <TextView
+                android:id="@+id/tv_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_every_day"
+                android:layout_centerHorizontal="true"
+                android:textColor="@drawable/bg_bottom_homepage_everyday_text"
+                android:text="每天"
+                android:textSize="10sp" />
+            <View
+                android:id="@+id/line1"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_600"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_find"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_bottom_homepage_find" />
+
+            <TextView
+                android:id="@+id/tv_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_find"
+                android:layout_centerHorizontal="true"
+                android:textColor="@drawable/bg_bottom_homepage_find_text"
+                android:text="发现"
+                android:textSize="10sp" />
+            <View
+                android:id="@+id/line2"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="#1EAFDC"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_column"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_column"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_bottom_homepage_column" />
+
+            <TextView
+                android:id="@+id/tv_column"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_column"
+                android:layout_centerHorizontal="true"
+                android:textColor="@drawable/bg_bottom_homepage_column_text"
+                android:text="专栏"
+                android:textSize="10sp" />
+            <View
+                android:id="@+id/line3"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:background="@color/red_500"></View>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
